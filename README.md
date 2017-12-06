@@ -1,6 +1,10 @@
 # restaura-pendrive
 Aplicação desenvolvida em Java, com interface gráfica, para restauração de arquivos em pendrive.
 
+<p align="center">
+	<img src="https://raw.githubusercontent.com/Cledersonbc/restaura-pendrive/master/imgs/recuperando.png"></img>
+</p>
+
 Muitas vezes inspetamos nosso pendrive em máquinas infectadas e nossos arquivos simplesmente somem, ou aparecem atalhos no lugar. Isso é causado por um *malware* (programa malicioso) que na maioria das vezes apenas **oculta** os arquivos do seu pendrive.
 
 Em vez de passar por um processo lento de recuperação de arquivos, teste essa aplicação que apenas irá desocultar o que estiver em seu pendrive, dentro de alguns segundos e então talvez tenha tudo de volta.
