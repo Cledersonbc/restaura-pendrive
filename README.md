@@ -16,3 +16,10 @@ Esse programa não necessita de instalação. É um executável em Java (.jar).
 Vá no diretório "Download" e clique no **restaura-pendrive.jar**. Para executar a aplicação é necessário ter uma versão atualizada do Java instalada. Em seguida, escolha a unidade do seu pendrive (Ex.: D:/, E:/...) e clique em **Recuperar**. Aguarde alguns segundos e logo após acesse seu pendrive.
 
 **Nota**: a aplicação **NÃO** remove o *malware* e nem faz recuperação de arquivos deletados. Para isso você pode usar outras ferramentas já existentes, como antivírus e *tools* para recuperação de arquivos deletados.
+
+# Development
+* [ ] update documentation
+* [ ] add protect feature
+* [ ] add language support
+* [ ] unit test
+* [ ] launch release 2.X.X
