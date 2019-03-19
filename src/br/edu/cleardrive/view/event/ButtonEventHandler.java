@@ -71,7 +71,7 @@ public class ButtonEventHandler implements ActionListener {
 		for (File root : roots) {
 			String cDisk = "C:\\";
 			
-			if (DriveUtils.validPath(root) && !root.toString().equals(cDisk)) {
+			if (DriveUtils.isValidPath(root) && !root.toString().equals(cDisk)) {
 				listedDrives.addItem(root.toString());
 			}
 		}

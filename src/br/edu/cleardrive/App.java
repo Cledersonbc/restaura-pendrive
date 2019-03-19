@@ -5,6 +5,14 @@ import javax.swing.UIManager;
 
 import br.edu.cleardrive.view.Window;
 
+/**
+ * Cleardrive is a software to recover hidden files from disks like pendrive on
+ * Windows operating system.
+ * @version 2.0.0
+ * @author Clederson Cruz
+ *
+ */
+
 public class App {
 	final public static String VERSION = "2.0.0";
 	final public static String AUTHOR = "Clederson Cruz";

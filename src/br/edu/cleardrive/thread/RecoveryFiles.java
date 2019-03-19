@@ -45,7 +45,7 @@ public class RecoveryFiles extends Thread {
 
 	private void tryRecover(File root) {
 
-		if (DriveUtils.validPath(root)) {
+		if (DriveUtils.isValidPath(root)) {
 			for (File path : root.listFiles()) {
 				if (exit) {
 					return;
