@@ -39,9 +39,9 @@ public final class DriveUtils {
 	 */
 	public static boolean isValidPath(File path) {
 		if (path.isFile()) {
-			return validFile(path);
+			return isValidFile(path);
 		} else {
-			return validDirectory(path);
+			return isValidDirectory(path);
 		}
 	}
 
@@ -93,7 +93,7 @@ public final class DriveUtils {
 	 *
 	 * @return true if the specified file is valid
 	 */
-	public static boolean validFile(File file) {
+	public static boolean isValidFile(File file) {
 		return file.canRead() && file.canWrite();
 	}
 
@@ -105,7 +105,7 @@ public final class DriveUtils {
 	 *
 	 * @return true if the specified directory is valid
 	 */
-	public static boolean validDirectory(File directory) {
+	public static boolean isValidDirectory(File directory) {
 		return directory.canRead() && directory.canWrite() && directory.canExecute();
 	}
 }
