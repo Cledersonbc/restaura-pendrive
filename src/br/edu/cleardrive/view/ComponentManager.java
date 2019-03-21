@@ -28,10 +28,12 @@ public class ComponentManager {
 	}
 	
 	public static void enableConflictingButtons(boolean value) {
-		JButton protecBtn = (JButton) get(ComponentName.PROTECT_BUTTON.name());
-		JButton recoverBtn = (JButton) get(ComponentName.RECOVER_BUTTON.name());
+		JButton protecBtn = (JButton) get(ComponentName.PROTECT_BUTTON.toString());
+		JButton recoverBtn = (JButton) get(ComponentName.RECOVER_BUTTON.toString());
 		@SuppressWarnings("unchecked") // Ever will be a ComboBox
-		JComboBox<String> listedDrives = (JComboBox<String>) get(ComponentName.DRIVE_CHANGED_COMBOBOX.name());
+		JComboBox<String> listedDrives = (JComboBox<String>) get(
+				ComponentName.DRIVE_CHANGED_COMBOBOX.toString()
+		);
 		
 		protecBtn.setEnabled(value);
 		recoverBtn.setEnabled(value);
@@ -39,7 +41,7 @@ public class ComponentManager {
 	}
 	
 	public static void updateViewOutput(String text) {
-		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.name());
+		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.toString());
 		JViewport viewPort = (JViewport) outputView.getParent();
 		JScrollPane panel = (JScrollPane) viewPort.getParent();
 		JScrollBar scrollBar = panel.getVerticalScrollBar();
@@ -49,17 +51,19 @@ public class ComponentManager {
 	}
 	
 	public static void clearViewOutput() {
-		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.name());
+		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.toString());
 		outputView.setText("");
 	}
 	
 	public static void fillFullProgressBar() {
-		JProgressBar progressBar = (JProgressBar) get(ComponentName.STATUS_PROGRESS_BAR.name());
+		JProgressBar progressBar = (JProgressBar) get(ComponentName.STATUS_PROGRESS_BAR.toString());
 		progressBar.setValue(100);
 	}
 	
 	public static void incrementProgressBar(int increment) {
-		JProgressBar progressBar = (JProgressBar) ComponentManager.get(ComponentName.STATUS_PROGRESS_BAR.name());
+		JProgressBar progressBar = (JProgressBar) ComponentManager.get(
+				ComponentName.STATUS_PROGRESS_BAR.toString()
+		);
 		progressBar.setValue(progressBar.getValue() + increment);
 	}
 }

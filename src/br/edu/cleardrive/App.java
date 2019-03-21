@@ -8,7 +8,9 @@ import br.edu.cleardrive.view.Window;
 /**
  * Cleardrive is a software to recover hidden files from disks like pendrive on
  * Windows operating system.
+ *
  * @version 2.0.0
+ *
  * @author Clederson Cruz
  *
  */
@@ -26,10 +28,10 @@ public class App {
 
 		String osname = System.getProperty("os.name").toLowerCase();
 		if (!osname.contains("windows")) {
-			JOptionPane.showMessageDialog(null,
-					"Essa aplicação não funcionará bem em uma plataforma diferente do Windows.",
-					"Alerta",
-					JOptionPane.WARNING_MESSAGE);
+			String message = "Essa aplicação não funcionará bem em uma plataforma diferente do Windows.";
+			String title = "Alerta";
+
+			JOptionPane.showMessageDialog(null, message, title, JOptionPane.WARNING_MESSAGE);
 		}
 		new Window();
 

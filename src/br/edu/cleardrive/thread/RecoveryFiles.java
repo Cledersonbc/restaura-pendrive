@@ -19,7 +19,7 @@ public class RecoveryFiles extends Thread {
 	private final int PROGRESS_INCREMENT_NUMBER;
 	private int ignoredFiles;
 	private File root;
-	private boolean exit = false;
+	private static boolean exit = false;
 
 	public RecoveryFiles() {
 		super();
@@ -78,6 +78,10 @@ public class RecoveryFiles extends Thread {
 	}
 
 	public void stopThread() {
+		exit = true;
+	}
+
+	public static void killAll() {
 		exit = true;
 	}
 
