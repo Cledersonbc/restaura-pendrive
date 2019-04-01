@@ -3,7 +3,7 @@ package br.edu.cleardrive.command;
 import java.util.HashMap;
 import java.util.Map;
 
-import br.edu.cleardrive.view.ComponentName;
+import br.edu.cleardrive.view.component.ComponentName;
 
 public class Invoker {
 

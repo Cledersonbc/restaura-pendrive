@@ -1,7 +1,7 @@
 package br.edu.cleardrive.command;
 
 import br.edu.cleardrive.thread.RecoveryFiles;
-import br.edu.cleardrive.view.ComponentManager;
+import br.edu.cleardrive.view.component.ComponentManager;
 
 public class StopRecoverCommand implements Command {
 

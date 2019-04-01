@@ -11,6 +11,8 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import br.edu.cleardrive.view.component.ComponentManager;
+import br.edu.cleardrive.view.component.ComponentName;
 import br.edu.cleardrive.view.event.ButtonEventHandler;
 
 public class MainPanel extends JPanel {

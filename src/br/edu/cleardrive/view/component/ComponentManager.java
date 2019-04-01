@@ -1,4 +1,4 @@
-package br.edu.cleardrive.view;
+package br.edu.cleardrive.view.component;
 
 import java.util.HashMap;
 import java.util.Map;

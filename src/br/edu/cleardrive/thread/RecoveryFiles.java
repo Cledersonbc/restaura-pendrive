@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import javax.swing.JComboBox;
 
 import br.edu.cleardrive.util.DriveUtils;
-import br.edu.cleardrive.view.ComponentManager;
-import br.edu.cleardrive.view.ComponentName;
+import br.edu.cleardrive.view.component.ComponentManager;
+import br.edu.cleardrive.view.component.ComponentName;
 
 public class RecoveryFiles extends Thread {
 

@@ -4,8 +4,8 @@ import javax.swing.JComboBox;
 
 import br.edu.cleardrive.thread.RecoveryFiles;
 import br.edu.cleardrive.util.StringUtils;
-import br.edu.cleardrive.view.ComponentManager;
-import br.edu.cleardrive.view.ComponentName;
+import br.edu.cleardrive.view.component.ComponentManager;
+import br.edu.cleardrive.view.component.ComponentName;
 
 public class RecoverCommand implements Command {
 

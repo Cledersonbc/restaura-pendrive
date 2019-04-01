@@ -1,4 +1,4 @@
-package br.edu.cleardrive.view;
+package br.edu.cleardrive.view.component;
 
 public enum ComponentName {
 	ABOUT_BUTTON, RECOVER_BUTTON, PROTECT_BUTTON, STOP_BUTTON,
