@@ -15,13 +15,32 @@ import br.edu.cleardrive.view.component.ComponentManager;
 import br.edu.cleardrive.view.component.ComponentName;
 import br.edu.cleardrive.view.event.ButtonEventHandler;
 
+/**
+ * Main panel constains three parts: head, body and footer. Each part has
+ * your owner components like buttons, labels, fields etc. MainPanel extends
+ * JPanel by default.
+ *
+ * @author Clederson Cruz
+ *
+ * @since 2.0.0
+ */
+
 public class MainPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private final short PADDING = 4;
 	private ButtonEventHandler buttonEventHandler;
 
 
-	public MainPanel() {
+	/**
+	 * <p>
+	 * When a instance of MainPanel are called, all inner panels are
+	 * initialized.
+	 *
+	 * <p>
+	 * This class is only instantiable in view package or
+	 * by inheritance. The constructor are protected as default.
+	 */
+	protected MainPanel() {
 		this.setLayout(new BorderLayout());
 		buttonEventHandler = new ButtonEventHandler();
 
@@ -31,6 +50,14 @@ public class MainPanel extends JPanel {
 	}
 
 
+	/**
+	 * <p>
+	 * Builds the header panel, initializing each component.
+	 *
+	 * <p>
+	 * All components are registered on ComponentManager and your actions
+	 * are setting by a action command name.
+	 */
 	private void buildHeaderPanel() {
 		JPanel header = new JPanel(new GridLayout(2, 2, PADDING, PADDING));
 		JComboBox<String> listedDrives = new JComboBox<String>();
@@ -51,6 +78,14 @@ public class MainPanel extends JPanel {
 	}
 
 
+	/**
+	 * <p>
+	 * Builds the body panel, initializing each component.
+	 *
+	 * <p>
+	 * All components are registered on ComponentManager and your actions
+	 * are setting by a action command name.
+	 */
 	private void buildBodyPanel() {
 		JPanel body = new JPanel(new GridLayout(1, 1, PADDING, PADDING));
 		JTextArea outputView = new JTextArea();
@@ -63,6 +98,14 @@ public class MainPanel extends JPanel {
 		this.add(body, BorderLayout.CENTER);
 	}
 
+	/**
+	 * <p>
+	 * Builds the footer panel, initializing each component.
+	 *
+	 * <p>
+	 * All components are registered on ComponentManager and your actions
+	 * are setting by a action command name.
+	 */
 	private void buildFooterPanel() {
 		JPanel footer = new JPanel(new GridLayout(1, 1, PADDING, PADDING));
 		JButton btnAbout = new JButton("Sobre");
