@@ -4,8 +4,20 @@ import javax.swing.JOptionPane;
 
 import br.edu.cleardrive.App;
 
+/**
+ * Command to show "About the software".
+ *
+ * @author Clederson Cruz
+ *
+ * @since 2.0.0
+ *
+ */
+
 public class AboutCommand implements Command {
 
+	/**
+	 * Executes the command, that shows "about the software" in a JOptionFrame.
+	 */
 	@Override
 	public void execute() {
 		StringBuilder message = new StringBuilder();

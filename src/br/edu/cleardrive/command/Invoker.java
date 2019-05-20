@@ -5,13 +5,23 @@ import java.util.Map;
 
 import br.edu.cleardrive.view.component.ComponentName;
 
+/**
+ * Invoker of all commands.
+ *
+ * @author Clederson Cruz
+ *
+ * @since 2.0.0
+ *
+ */
+
 public class Invoker {
 
 	private final Map<String, Command> commands;
 
+	/**
+	 * Constructor that initializes all available commands.
+	 */
 	public Invoker() {
-		//XXX this is not a good implementation because I need to instantiate all commands ever time
-		// Find the best way to do it
 		commands = new HashMap<String, Command>();
 		commands.put(ComponentName.ABOUT_BUTTON.toString(), new AboutCommand());
 		commands.put(ComponentName.DRIVE_CHANGED_COMBOBOX.toString(), new DriveChangeCommand());
@@ -20,6 +30,11 @@ public class Invoker {
 		commands.put(ComponentName.PROTECT_BUTTON.toString(), new ProtectCommand());
 	}
 
+	/**
+	 * Executes an action.
+	 *
+	 * @param action to be executed.
+	 */
 	public void executeAction(String action) {
 		commands.get(action).execute();
 	}
