@@ -18,7 +18,7 @@ Vá no diretório "Download" e clique no **restaura-pendrive.jar**. Para executa
 **Nota**: a aplicação **NÃO** remove o *malware* e nem faz recuperação de arquivos deletados. Para isso você pode usar outras ferramentas já existentes, como antivírus e *tools* para recuperação de arquivos deletados.
 
 # Development
-* [ ] update documentation
+* [X] update documentation (version 1.0)
 * [ ] add protect feature
 * [ ] add language support
 * [ ] unit test
