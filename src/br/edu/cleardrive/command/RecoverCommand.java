@@ -39,7 +39,7 @@ public class RecoverCommand implements Command {
 	 * Starts the action to recover.
 	 */
 	private void startRecover() {
-		//ComponentManager.enableConflictingButtons(false); //disable GUI Buttons
+		ComponentManager.enableConflictingButtons(false); //disable GUI Buttons
 		new RecoveryFiles().start();
 	}
 

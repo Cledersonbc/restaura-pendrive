@@ -25,11 +25,10 @@ public class DriveChangeCommand implements Command {
 	@Override
 	public void execute() {
 		@SuppressWarnings("unchecked") // Ever will be a ComboBox
-		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager
-				.get(ComponentName.DRIVE_CHANGED_COMBOBOX.name());
+		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager.get(ComponentName.DRIVE_CHANGED_COMBOBOX.name());
 		File[] roots = File.listRoots();
-
 		listedDrives.removeAllItems();
+
 		for (File root : roots) {
 			if (DriveUtils.isValidPath(root) && isNonCDisk(root)) {
 				listedDrives.addItem(root.toString());

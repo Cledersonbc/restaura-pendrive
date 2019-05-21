@@ -68,6 +68,7 @@ public class MainPanel extends JPanel {
 
 		listedDrives.setActionCommand(ComponentName.DRIVE_CHANGED_COMBOBOX.toString());
 		listedDrives.addActionListener(buttonEventHandler);
+		listedDrives.addItem("vazio");
 
 		header.add(new JLabel("Progeresso:"));
 		header.add(progressBar);
@@ -103,8 +104,8 @@ public class MainPanel extends JPanel {
 	 * Builds the footer panel, initializing each component.
 	 *
 	 * <p>
-	 * All components are registered on ComponentManager and your actions
-	 * are setting by a action command name.
+	 * All components are registered on ComponentManager and your actions are
+	 * setting by a action command name.
 	 */
 	private void buildFooterPanel() {
 		JPanel footer = new JPanel(new GridLayout(1, 1, PADDING, PADDING));

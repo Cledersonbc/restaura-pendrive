@@ -34,8 +34,6 @@ public class RecoveryFiles extends Thread {
 	 *  Default constructor that initializes super() and private fields.
 	 */
 	public RecoveryFiles() {
-		super();
-
 		@SuppressWarnings("unchecked") // It will be a ComboBox forever
 		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager
 				.get(ComponentName.DRIVE_CHANGED_COMBOBOX.name());
