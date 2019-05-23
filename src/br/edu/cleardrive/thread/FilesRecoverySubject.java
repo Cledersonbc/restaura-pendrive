@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import br.edu.cleardrive.observer.ObservableData;
+import br.edu.cleardrive.model.ObservableData;
 import br.edu.cleardrive.observer.Observer;
 import br.edu.cleardrive.util.DriveUtils;
 

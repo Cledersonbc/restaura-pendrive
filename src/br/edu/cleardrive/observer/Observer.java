@@ -1,5 +1,7 @@
 package br.edu.cleardrive.observer;
 
+import br.edu.cleardrive.model.ObservableData;
+
 /**
  * An observer that updates your output according to subject's data.
  *

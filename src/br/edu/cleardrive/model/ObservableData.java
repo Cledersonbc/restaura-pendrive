@@ -1,4 +1,4 @@
-package br.edu.cleardrive.observer;
+package br.edu.cleardrive.model;
 
 /**
  * This class represents the data produced by a subject to be sent to observers.

@@ -1,5 +1,6 @@
 package br.edu.cleardrive.observer;
 
+import br.edu.cleardrive.model.ObservableData;
 import br.edu.cleardrive.view.component.ComponentManager;
 
 /**
