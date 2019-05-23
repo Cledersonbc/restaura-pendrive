@@ -16,7 +16,7 @@ import br.edu.cleardrive.view.component.ComponentName;
 import br.edu.cleardrive.view.event.ButtonEventHandler;
 
 /**
- * Main panel constains three parts: head, body and footer. Each part has
+ * Main panel contains three parts: head, body and footer. Each part has
  * your owner components like buttons, labels, fields etc. MainPanel extends
  * JPanel by default.
  *

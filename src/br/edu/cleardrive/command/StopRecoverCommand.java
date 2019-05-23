@@ -1,6 +1,6 @@
 package br.edu.cleardrive.command;
 
-import br.edu.cleardrive.thread.RecoveryFiles;
+import br.edu.cleardrive.thread.FilesRecoverySubject;
 import br.edu.cleardrive.view.component.ComponentManager;
 
 /**
@@ -15,14 +15,15 @@ import br.edu.cleardrive.view.component.ComponentManager;
 public class StopRecoverCommand implements Command {
 
 	/**
-	 * Executes the command to stop the recovery of files.
+	 * Executes the command to stop the recovery of files if exists a recovery
+	 * thread executing.
 	 */
 	@Override
 	public void execute() {
 		ComponentManager.enableConflictingButtons(true);
 
-		if (RecoveryFiles.activeCount() > 0) {
-			RecoveryFiles.killAll();
+		if (FilesRecoverySubject.activeCount() > 0) {
+			FilesRecoverySubject.stopRecovery();
 		}
 	}
 }

@@ -64,14 +64,14 @@ public final class DriveUtils {
 	 *
 	 * <p>
 	 * A recoverable file need to contains a valid path. This method counts files as
-	 * well as directory.
+	 * well as directory. Note: Unix special files like "srwxr-xr-x" are ignored.
 	 *
 	 * @param root to be inspected
 	 *
 	 * @return number of recoverable files
 	 */
-	public static int countRecoverableFiles(File root) {
-		int sum = 0;
+	public static long countRecoverableFiles(File root) {
+		long sum = 0;
 
 		if (isValidPath(root)) {
 			for (File path : root.listFiles()) {

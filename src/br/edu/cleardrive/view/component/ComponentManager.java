@@ -107,11 +107,11 @@ public final class ComponentManager {
 	}
 
 	/**
-	 * Fill full progress bar to 100%.
+	 * Clears the progress bar.
 	 */
-	public static void fillFullProgressBar() {
+	public static void clearProgressBar() {
 		JProgressBar progressBar = (JProgressBar) get(ComponentName.STATUS_PROGRESS_BAR.toString());
-		progressBar.setValue(100);
+		progressBar.setValue(0);
 	}
 
 	/**
