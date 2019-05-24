@@ -119,7 +119,7 @@ public final class ComponentManager {
 	/**
 	 * Receives a increment value and increases the progress bar.
 	 *
-	 * @param increment
+	 * @param increment to update progress bar.
 	 */
 	public static void incrementProgressBar(int increment) {
 		JProgressBar progressBar = (JProgressBar) ComponentManager.get(

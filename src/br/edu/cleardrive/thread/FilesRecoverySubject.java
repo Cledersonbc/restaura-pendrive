@@ -47,6 +47,10 @@ public class FilesRecoverySubject extends Thread {
 	/**
 	 * Default constructor that initializes private fields.
 	 *
+	 * @param root is a drive to be recovered.
+	 *
+	 * @param observer to be notified.
+	 *
 	 * @throws NullPointerException if root or observer are null.
 	 */
 	public FilesRecoverySubject(File root, Observer observer) {
