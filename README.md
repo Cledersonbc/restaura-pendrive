@@ -19,7 +19,7 @@ Vá no diretório "Download" e clique no **restaura-pendrive.jar**. Para executa
 
 # Development
 * [X] update documentation (version 1.0)
-* [ ] adapt to CLI usage
+* [X] adapt to CLI usage
 * [ ] add protect feature
 * [ ] add language support
 * [ ] unit test
