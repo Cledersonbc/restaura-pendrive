@@ -26,8 +26,20 @@ import br.edu.cleardrive.view.component.ComponentManager;
  */
 
 public class MainPanel extends JPanel {
+
+	/**
+	 * Serial Version UID
+	 */
 	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Padding of GUI components.
+	 */
 	private final short PADDING = 4;
+
+	/**
+	 * Event handler for GUI components.
+	 */
 	private ButtonEventHandler buttonEventHandler;
 
 

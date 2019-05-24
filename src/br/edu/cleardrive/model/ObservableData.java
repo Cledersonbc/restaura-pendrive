@@ -11,9 +11,25 @@ package br.edu.cleardrive.model;
 
 public class ObservableData {
 
+	/**
+	 * Total of files to be recovered if possible.
+	 */
 	private long total;
+
+	/**
+	 * Number of recovered files.
+	 */
 	private long recoveredFiles;
+
+	/**
+	 * Number of ignoredFiles.
+	 */
 	private long ignoredFiles;
+
+	/**
+	 * Last message about recovery state. Generally a path name of the last
+	 * recovered file.
+	 */
 	private String lastMessage;
 
 	/**
@@ -67,8 +83,8 @@ public class ObservableData {
 	}
 
 	/**
-	 * Gets the last message sent by the subject. Basically a path name of the file, if
-	 * recovered, or "IGN" + path name of the file, if ignored.
+	 * Gets the last message sent by the subject. Basically a path name of the file,
+	 * if recovered, or "IGN" + path name of the file, if ignored.
 	 *
 	 * @return the last message sent by subject.
 	 */
@@ -77,8 +93,8 @@ public class ObservableData {
 	}
 
 	/**
-	 * Sets the last message sent by the subject. Basically a path name of the file, if
-	 * recovered, or "IGN" + path name of the file, if ignored.
+	 * Sets the last message sent by the subject. Basically a path name of the file,
+	 * if recovered, or "IGN" + path name of the file, if ignored.
 	 *
 	 * @param lastMessage from subject.
 	 */
@@ -87,7 +103,8 @@ public class ObservableData {
 	}
 
 	/**
-	 * Verifies if the recovery by the subject has finished looking the total of recoveredFiles + ignoredFiles.
+	 * Verifies if the recovery by the subject has finished looking the total of
+	 * recoveredFiles + ignoredFiles.
 	 *
 	 * @return true if the recovery by the subject has finished.
 	 */

@@ -5,8 +5,21 @@ import java.util.HashMap;
 import br.edu.cleardrive.App;
 import br.edu.cleardrive.ExecutionMode;
 
+/**
+ * Command to show the version of this software.
+ *
+ * @author Clederson Cruz
+ *
+ * @since 2.0.0
+ *
+ */
+
 public class VersionCommand implements Command {
 
+	/**
+	 * Executes the command to shows the software version. This operation is only
+	 * available in CLI mode. In GUI mode, "about" satisfy.
+	 */
 	@Override
 	public void execute() {
 		if (App.getExecutionMode().equals(ExecutionMode.CLI)) {
@@ -14,6 +27,11 @@ public class VersionCommand implements Command {
 		}
 	}
 
+	/**
+	 * CLI command to show the software version.
+	 *
+	 * @throws IllegalArgumentException if the args or syntax are incorrectly.
+	 */
 	private void cliCommand() {
 		HashMap<String, String> versionName = new HashMap<>();
 		String args[] = App.getLatestArgs();

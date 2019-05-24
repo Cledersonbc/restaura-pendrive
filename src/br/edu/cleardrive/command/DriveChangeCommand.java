@@ -21,7 +21,9 @@ import br.edu.cleardrive.view.component.ComponentManager;
 public class DriveChangeCommand implements Command {
 
 	/**
-	 * Executes the change in the ComboBox.
+	 * Executes the change in the ComboBox. This operation is unsupported by CLI mode.
+	 *
+	 * @throws UnsupportedOperationException if this command is called by CLI mode.
 	 */
 	@Override
 	public void execute() {

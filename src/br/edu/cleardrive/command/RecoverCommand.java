@@ -38,6 +38,11 @@ public class RecoverCommand implements Command {
 		}
 	}
 
+	/**
+	 * Recovers through CLI mode.
+	 *
+	 * @throws IllegalArgumentException if the drive or syntax are incorrectly.
+	 */
 	private void cliCommand() {
 		String args[] = App.getLatestArgs();
 		String command = args[0];
@@ -56,11 +61,13 @@ public class RecoverCommand implements Command {
 		startRecover(drive, observer);
 	}
 
+	/**
+	 * Recovers through GUI mode.
+	 */
 	private void guiCommand() {
 		@SuppressWarnings("unchecked") // It's a ComboBox
-		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager.get(
-				CommandName.DRIVE_CHANGED_COMBOBOX.name()
-		);
+		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager
+				.get(CommandName.DRIVE_CHANGED_COMBOBOX.name());
 
 		String drive = (String) listedDrives.getSelectedItem();
 		if (StringUtils.isNullOrEmpty(drive)) {
@@ -76,11 +83,12 @@ public class RecoverCommand implements Command {
 	}
 
 	/**
-	 * The process to start the action to recover consists in disable some GUI
-	 * buttons, clear screen and progress bar, than create a thread that starts the
-	 * recovery.
+	 * The process to start the action to recover consists in create a thread that
+	 * starts the recovery itself.
 	 *
 	 * @param drive is the root path to be recovered.
+	 *
+	 * @param observer to be notified about the recovery status.
 	 */
 	private void startRecover(String drive, Observer observer) {
 		File root = new File(drive);

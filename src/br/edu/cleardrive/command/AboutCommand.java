@@ -17,7 +17,7 @@ import br.edu.cleardrive.ExecutionMode;
 public class AboutCommand implements Command {
 
 	/**
-	 * Executes the command, that shows "about the software" in a JOptionFrame.
+	 * Executes the command, that it shows "about the software".
 	 */
 	@Override
 	public void execute() {
@@ -38,6 +38,13 @@ public class AboutCommand implements Command {
 		}
 	}
 
+	/**
+	 * Shows information about this software in CLI.
+	 *
+	 * @param message to be sent about this software.
+	 *
+	 * @throws IllegalArgumentException if the args or syntax are incorrectly.
+	 */
 	private void cliCommand(String message) {
 		String args[] = App.getLatestArgs();
 		String command = args[0];
@@ -48,6 +55,11 @@ public class AboutCommand implements Command {
 		System.out.println(message);
 	}
 
+	/**
+	 * Shows information about this software in GUI.
+	 *
+	 * @param message to be sent about this software.
+	 */
 	private void guiCommand(String message) {
 		String title = "Sobre";
 		JOptionPane.showMessageDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);

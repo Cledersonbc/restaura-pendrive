@@ -7,7 +7,7 @@ import br.edu.cleardrive.command.Invoker;
 
 /**
  * Client to invoke action commands for each component
- * that are registered on ComponenManager.
+ * that are registered on ComponentManager.
  *
  * @author Clederson Cruz
  *

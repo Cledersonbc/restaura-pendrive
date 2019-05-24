@@ -18,7 +18,9 @@ public class StopRecoverCommand implements Command {
 
 	/**
 	 * Executes the command to stop the recovery of files if exists a recovery
-	 * thread executing.
+	 * thread executing. This operation is unsupported in CLI mode.
+	 *
+	 * @throws UnsupportedOperationException if this command is called by CLI.
 	 */
 	@Override
 	public void execute() {

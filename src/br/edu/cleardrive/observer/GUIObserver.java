@@ -30,7 +30,7 @@ public class GUIObserver extends Observer {
 	 * getMinIncrement. But that method expects an int value and if the number of
 	 * files to be recovered is bigger than Integer.MAX_VALUE, then an exception
 	 * will occur. But with this implementation, progressBar will always be set with
-	 * values 0 <= n <= 100 and an exception in increment will not occur.
+	 * values 0 &lt;= n &lt;= 100 and an exception in increment will not occur.
 	 *
 	 * @param data for update output.
 	 */

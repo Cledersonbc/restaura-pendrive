@@ -3,8 +3,20 @@ package br.edu.cleardrive.command;
 import br.edu.cleardrive.App;
 import br.edu.cleardrive.ExecutionMode;
 
+/**
+ * HelpCommand shows all available commands on CLI.
+ *
+ * @author Clederson Cruz
+ *
+ * @since 2.0.0
+ *
+ */
+
 public class HelpCommand implements Command {
 
+	/**
+	 * Executes HelpCommand, available only in CLI usage.
+	 */
 	@Override
 	public void execute() {
 		if (App.getExecutionMode().equals(ExecutionMode.CLI)) {
@@ -13,6 +25,9 @@ public class HelpCommand implements Command {
 
 	}
 
+	/**
+	 * Shows all available CLI commands.
+	 */
 	private void cliCommand() {
 		String args[] = App.getLatestArgs();
 		String command = args[0];

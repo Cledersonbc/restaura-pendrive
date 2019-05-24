@@ -24,13 +24,30 @@ import br.edu.cleardrive.util.DriveUtils;
 
 public class FilesRecoverySubject extends Thread {
 
+	/**
+	 * Root path is a drive to be scanned for recovery process.
+	 */
 	private File root;
+
+	/**
+	 * Indicate that this thread is already running.
+	 */
 	private static boolean alive;
+
+	/**
+	 * State of the recovery are log in an ObservableData object.
+	 */
 	private ObservableData data = new ObservableData();
+
+	/**
+	 * Set of observers to be notified that ObservableData was changed.
+	 */
 	private Set<Observer> observers = new HashSet<>();
 
 	/**
 	 * Default constructor that initializes private fields.
+	 *
+	 * @throws NullPointerException if root or observer are null.
 	 */
 	public FilesRecoverySubject(File root, Observer observer) {
 		if (Objects.isNull(root)) {

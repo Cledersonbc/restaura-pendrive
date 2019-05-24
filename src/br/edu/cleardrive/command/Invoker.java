@@ -14,6 +14,9 @@ import java.util.Map;
 
 public class Invoker {
 
+	/**
+	 * Storage of all available commands.
+	 */
 	private final Map<String, Command> commands;
 
 	/**
