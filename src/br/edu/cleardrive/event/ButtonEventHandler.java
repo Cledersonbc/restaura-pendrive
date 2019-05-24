@@ -1,4 +1,4 @@
-package br.edu.cleardrive.view.event;
+package br.edu.cleardrive.event;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

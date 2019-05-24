@@ -1,5 +1,7 @@
 package br.edu.cleardrive.command;
 
+import br.edu.cleardrive.App;
+import br.edu.cleardrive.ExecutionMode;
 import br.edu.cleardrive.thread.FilesRecoverySubject;
 import br.edu.cleardrive.view.component.ComponentManager;
 
@@ -20,10 +22,15 @@ public class StopRecoverCommand implements Command {
 	 */
 	@Override
 	public void execute() {
-		ComponentManager.enableConflictingButtons(true);
 
 		if (FilesRecoverySubject.activeCount() > 0) {
 			FilesRecoverySubject.stopRecovery();
+		}
+
+		if (App.getExecutionMode().equals(ExecutionMode.GUI)) {
+			ComponentManager.enableConflictingButtons(true);
+		} else if (App.getExecutionMode().equals(ExecutionMode.CLI)) {
+			throw new UnsupportedOperationException("Operação não suportada via linha de comando.");
 		}
 	}
 }

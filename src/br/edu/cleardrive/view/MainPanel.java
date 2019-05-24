@@ -11,9 +11,9 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+import br.edu.cleardrive.command.CommandName;
+import br.edu.cleardrive.event.ButtonEventHandler;
 import br.edu.cleardrive.view.component.ComponentManager;
-import br.edu.cleardrive.view.component.ComponentName;
-import br.edu.cleardrive.view.event.ButtonEventHandler;
 
 /**
  * Main panel contains three parts: head, body and footer. Each part has
@@ -63,10 +63,10 @@ public class MainPanel extends JPanel {
 		JComboBox<String> listedDrives = new JComboBox<String>();
 		JProgressBar progressBar = new JProgressBar();
 
-		ComponentManager.register(ComponentName.DRIVE_CHANGED_COMBOBOX.toString(), listedDrives);
-		ComponentManager.register(ComponentName.STATUS_PROGRESS_BAR.toString(), progressBar);
+		ComponentManager.register(CommandName.DRIVE_CHANGED_COMBOBOX.toString(), listedDrives);
+		ComponentManager.register(CommandName.STATUS_PROGRESS_BAR.toString(), progressBar);
 
-		listedDrives.setActionCommand(ComponentName.DRIVE_CHANGED_COMBOBOX.toString());
+		listedDrives.setActionCommand(CommandName.DRIVE_CHANGED_COMBOBOX.toString());
 		listedDrives.addActionListener(buttonEventHandler);
 		listedDrives.addItem("vazio");
 
@@ -91,7 +91,7 @@ public class MainPanel extends JPanel {
 		JPanel body = new JPanel(new GridLayout(1, 1, PADDING, PADDING));
 		JTextArea outputView = new JTextArea();
 
-		ComponentManager.register(ComponentName.OUTPUT_VIEW_TEXT_AREA.toString(), outputView);
+		ComponentManager.register(CommandName.OUTPUT_VIEW_TEXT_AREA.toString(), outputView);
 
 		outputView.setEditable(false);
 		body.add(new JScrollPane(outputView));
@@ -114,22 +114,22 @@ public class MainPanel extends JPanel {
 		JButton btnStop = new JButton("Parar");
 		JButton btnRecovery = new JButton("Recuperar");
 
-		ComponentManager.register(ComponentName.ABOUT_BUTTON.toString(), btnAbout);
-		ComponentManager.register(ComponentName.PROTECT_BUTTON.toString(), btnProtect);
-		ComponentManager.register(ComponentName.STOP_BUTTON.toString(), btnStop);
-		ComponentManager.register(ComponentName.RECOVER_BUTTON.toString(), btnRecovery);
+		ComponentManager.register(CommandName.ABOUT.toString(), btnAbout);
+		ComponentManager.register(CommandName.PROTECT.toString(), btnProtect);
+		ComponentManager.register(CommandName.STOP.toString(), btnStop);
+		ComponentManager.register(CommandName.RECOVER.toString(), btnRecovery);
 
 		btnAbout.addActionListener(buttonEventHandler);
-		btnAbout.setActionCommand(ComponentName.ABOUT_BUTTON.toString());
+		btnAbout.setActionCommand(CommandName.ABOUT.toString());
 
 		btnProtect.addActionListener(buttonEventHandler);
-		btnProtect.setActionCommand(ComponentName.PROTECT_BUTTON.toString());
+		btnProtect.setActionCommand(CommandName.PROTECT.toString());
 
 		btnStop.addActionListener(buttonEventHandler);
-		btnStop.setActionCommand(ComponentName.STOP_BUTTON.toString());
+		btnStop.setActionCommand(CommandName.STOP.toString());
 
 		btnRecovery.addActionListener(buttonEventHandler);
-		btnRecovery.setActionCommand(ComponentName.RECOVER_BUTTON.toString());
+		btnRecovery.setActionCommand(CommandName.RECOVER.toString());
 
 		footer.add(btnAbout);
 		footer.add(btnProtect);

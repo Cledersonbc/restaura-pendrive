@@ -3,8 +3,6 @@ package br.edu.cleardrive.command;
 import java.util.HashMap;
 import java.util.Map;
 
-import br.edu.cleardrive.view.component.ComponentName;
-
 /**
  * Invoker of all commands.
  *
@@ -23,11 +21,13 @@ public class Invoker {
 	 */
 	public Invoker() {
 		commands = new HashMap<String, Command>();
-		commands.put(ComponentName.ABOUT_BUTTON.toString(), new AboutCommand());
-		commands.put(ComponentName.DRIVE_CHANGED_COMBOBOX.toString(), new DriveChangeCommand());
-		commands.put(ComponentName.RECOVER_BUTTON.toString(), new RecoverCommand());
-		commands.put(ComponentName.STOP_BUTTON.toString(), new StopRecoverCommand());
-		commands.put(ComponentName.PROTECT_BUTTON.toString(), new ProtectCommand());
+		commands.put(CommandName.ABOUT.toString(), new AboutCommand());
+		commands.put(CommandName.DRIVE_CHANGED_COMBOBOX.toString(), new DriveChangeCommand());
+		commands.put(CommandName.HELP.toString(), new HelpCommand());
+		commands.put(CommandName.RECOVER.toString(), new RecoverCommand());
+		commands.put(CommandName.STOP.toString(), new StopRecoverCommand());
+		commands.put(CommandName.PROTECT.toString(), new ProtectCommand());
+		commands.put(CommandName.VERSION.toString(), new VersionCommand());
 	}
 
 	/**

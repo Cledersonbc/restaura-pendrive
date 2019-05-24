@@ -2,6 +2,8 @@ package br.edu.cleardrive.view;
 
 import javax.swing.JFrame;
 
+import br.edu.cleardrive.App;
+
 /**
  * The window shows all components inserted in main panel, like buttons, fields etc.
  * This class is a JFrame that supports all window's configurations.
@@ -30,7 +32,7 @@ public class Window extends JFrame {
 		short width = 450;
 		short height = 400;
 
-		this.setTitle("Clear Drive");
+		this.setTitle(App.NAME);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.pack();
 		this.setSize(width, height);

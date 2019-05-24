@@ -30,7 +30,7 @@ public class FilesRecoverySubject extends Thread {
 	private Set<Observer> observers = new HashSet<>();
 
 	/**
-	 * Default constructor that initializes super() and private fields.
+	 * Default constructor that initializes private fields.
 	 */
 	public FilesRecoverySubject(File root, Observer observer) {
 		if (Objects.isNull(root)) {

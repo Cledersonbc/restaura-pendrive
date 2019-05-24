@@ -12,6 +12,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JViewport;
 
+import br.edu.cleardrive.command.CommandName;
+
 /**
  * ComponentManager is a way to manage all GUI components, like buttons, fields, textarea etc.
  * This abstraction contains methods that allows you to put, get and remove GUI components to be
@@ -71,11 +73,11 @@ public final class ComponentManager {
 	 * @param value true or false to enable or disable
 	 */
 	public static void enableConflictingButtons(boolean value) {
-		JButton protecBtn = (JButton) get(ComponentName.PROTECT_BUTTON.toString());
-		JButton recoverBtn = (JButton) get(ComponentName.RECOVER_BUTTON.toString());
+		JButton protecBtn = (JButton) get(CommandName.PROTECT.toString());
+		JButton recoverBtn = (JButton) get(CommandName.RECOVER.toString());
 		@SuppressWarnings("unchecked") // Ever will be a ComboBox
 		JComboBox<String> listedDrives = (JComboBox<String>) get(
-				ComponentName.DRIVE_CHANGED_COMBOBOX.toString()
+				CommandName.DRIVE_CHANGED_COMBOBOX.toString()
 		);
 
 		protecBtn.setEnabled(value);
@@ -89,7 +91,7 @@ public final class ComponentManager {
 	 * @param text to be inserted
 	 */
 	public static void updateViewOutput(String text) {
-		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.toString());
+		JTextArea outputView = (JTextArea) get(CommandName.OUTPUT_VIEW_TEXT_AREA.toString());
 		JViewport viewPort = (JViewport) outputView.getParent();
 		JScrollPane panel = (JScrollPane) viewPort.getParent();
 		JScrollBar scrollBar = panel.getVerticalScrollBar();
@@ -102,7 +104,7 @@ public final class ComponentManager {
 	 * Clears the output view.
 	 */
 	public static void clearViewOutput() {
-		JTextArea outputView = (JTextArea) get(ComponentName.OUTPUT_VIEW_TEXT_AREA.toString());
+		JTextArea outputView = (JTextArea) get(CommandName.OUTPUT_VIEW_TEXT_AREA.toString());
 		outputView.setText("");
 	}
 
@@ -110,7 +112,7 @@ public final class ComponentManager {
 	 * Clears the progress bar.
 	 */
 	public static void clearProgressBar() {
-		JProgressBar progressBar = (JProgressBar) get(ComponentName.STATUS_PROGRESS_BAR.toString());
+		JProgressBar progressBar = (JProgressBar) get(CommandName.STATUS_PROGRESS_BAR.toString());
 		progressBar.setValue(0);
 	}
 
@@ -121,7 +123,7 @@ public final class ComponentManager {
 	 */
 	public static void incrementProgressBar(int increment) {
 		JProgressBar progressBar = (JProgressBar) ComponentManager.get(
-				ComponentName.STATUS_PROGRESS_BAR.toString()
+				CommandName.STATUS_PROGRESS_BAR.toString()
 		);
 		progressBar.setValue(progressBar.getValue() + increment);
 	}
