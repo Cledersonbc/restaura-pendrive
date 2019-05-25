@@ -75,7 +75,7 @@ public abstract class Observer {
 	}
 
 	/**
-	 * Returns an increment based on status progress of ObservableData.
+	 * Returns an increment based on progress status of the ObservableData.
 	 *
 	 * @param data from subject.
 	 *
