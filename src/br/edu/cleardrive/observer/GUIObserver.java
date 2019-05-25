@@ -36,13 +36,7 @@ public class GUIObserver extends Observer {
 	 */
 	@Override
 	public void update(ObservableData data) {
-		int increment;
-
-		if (super.hasMoreThan100Files(data)) {
-			increment = super.getMinIncrement(data);
-		} else {
-			increment = super.getMaxIncrement(data);
-		}
+		int increment = super.getIncrement(data);
 
 		ComponentManager.incrementProgressBar(increment);
 		ComponentManager.updateViewOutput(data.getLastMessage());

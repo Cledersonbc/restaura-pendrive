@@ -14,6 +14,11 @@ import br.edu.cleardrive.model.ObservableData;
 public class CLIObserver extends Observer {
 
 	/**
+	 * This field store the progress of recovery.
+	 */
+	private int statusProgress = 0;
+
+	/**
 	 * <p>
 	 * When receives an ObservableData, it updates your CLI. This process consists
 	 * in increase the value to be outputted in one of two ways: maxIncrement, if
@@ -27,15 +32,11 @@ public class CLIObserver extends Observer {
 	 */
 	@Override
 	public void update(ObservableData data) {
-		int increment;
+		int increment = super.getIncrement(data);
 
-		if (super.hasMoreThan100Files(data)) {
-			increment = super.getMinIncrement(data);
-		} else {
-			increment = super.getMaxIncrement(data);
-		}
+		this.statusProgress += increment;
 
-		System.out.println(String.format("[%d%%] %s%s", increment, data.getLastMessage(), System.lineSeparator()));
+		System.out.println(String.format("[%d%%] %s", this.statusProgress, data.getLastMessage()));
 
 		if (data.hasFinished()) {
 			System.out.println(data.getFinishedMessage());

@@ -73,4 +73,19 @@ public abstract class Observer {
 	protected boolean hasMoreThan100Files(ObservableData data) {
 		return data.getTotal() > 100;
 	}
+
+	/**
+	 * Returns an increment based on status progress of ObservableData.
+	 *
+	 * @param data from subject.
+	 *
+	 * @return an increment.
+	 */
+	protected int getIncrement(ObservableData data) {
+		if (hasMoreThan100Files(data)) {
+			return this.getMinIncrement(data);
+		} else {
+			return this.getMaxIncrement(data);
+		}
+	}
 }
