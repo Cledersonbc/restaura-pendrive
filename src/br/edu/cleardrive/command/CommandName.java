@@ -16,7 +16,7 @@ public enum CommandName {
 	ABOUT() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -26,7 +26,7 @@ public enum CommandName {
 	HELP() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -36,7 +36,7 @@ public enum CommandName {
 	RECOVER() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -46,7 +46,7 @@ public enum CommandName {
 	PROTECT() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -56,7 +56,7 @@ public enum CommandName {
 	STOP() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -66,7 +66,7 @@ public enum CommandName {
 	VERSION() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -76,7 +76,7 @@ public enum CommandName {
 	DRIVE_CHANGED_COMBOBOX() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -86,7 +86,7 @@ public enum CommandName {
 	OUTPUT_VIEW_TEXT_AREA() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	},
 
@@ -96,7 +96,7 @@ public enum CommandName {
 	STATUS_PROGRESS_BAR() {
 		@Override
 		public String toString() {
-			return super.toString().toLowerCase();
+			return this.name().toLowerCase();
 		}
 	};
 }

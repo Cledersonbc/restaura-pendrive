@@ -31,7 +31,7 @@ public class DriveChangeCommand implements Command {
 		if (App.getExecutionMode().equals(ExecutionMode.GUI)) {
 			@SuppressWarnings("unchecked") // Ever will be a ComboBox
 			JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager
-					.get(CommandName.DRIVE_CHANGED_COMBOBOX.name());
+					.get(CommandName.DRIVE_CHANGED_COMBOBOX.toString());
 			File[] roots = File.listRoots();
 			listedDrives.removeAllItems();
 

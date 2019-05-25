@@ -67,7 +67,7 @@ public class RecoverCommand implements Command {
 	private void guiCommand() {
 		@SuppressWarnings("unchecked") // It's a ComboBox
 		JComboBox<String> listedDrives = (JComboBox<String>) ComponentManager
-				.get(CommandName.DRIVE_CHANGED_COMBOBOX.name());
+				.get(CommandName.DRIVE_CHANGED_COMBOBOX.toString());
 
 		String drive = (String) listedDrives.getSelectedItem();
 		if (StringUtils.isNullOrEmpty(drive)) {
