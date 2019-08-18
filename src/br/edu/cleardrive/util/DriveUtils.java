@@ -108,4 +108,16 @@ public final class DriveUtils {
 	public static boolean isValidDirectory(File directory) {
 		return directory.canRead() && directory.canWrite() && directory.canExecute();
 	}
+
+	/**
+	 * Verifies if the drive is C://.
+	 *
+	 * @param root drive
+	 *
+	 * @return true if the drive is not C://
+	 */
+	public static boolean isNonCDisk(File root) {
+		String cDisk = "C:\\";
+		return !root.toString().equals(cDisk);
+	}
 }

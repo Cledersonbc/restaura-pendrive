@@ -18,7 +18,7 @@ import br.edu.cleardrive.util.DriveUtils;
  *
  * @author Clederson Cruz
  *
- * @since 1.0.0
+ * @since 2.0.0
  *
  */
 
@@ -66,7 +66,7 @@ public class FilesRecoverySubject extends Thread {
 	}
 
 	/**
-	 * Start this thread.
+	 * Starts this thread.
 	 */
 	@Override
 	public void run() {

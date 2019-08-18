@@ -13,6 +13,7 @@ import javax.swing.JTextArea;
 
 import br.edu.cleardrive.command.CommandName;
 import br.edu.cleardrive.event.ButtonEventHandler;
+import br.edu.cleardrive.thread.DrivesWatcher;
 import br.edu.cleardrive.view.component.ComponentManager;
 
 /**
@@ -79,8 +80,7 @@ public class MainPanel extends JPanel {
 		ComponentManager.register(CommandName.STATUS_PROGRESS_BAR.toString(), progressBar);
 
 		listedDrives.setActionCommand(CommandName.DRIVE_CHANGED_COMBOBOX.toString());
-		listedDrives.addActionListener(buttonEventHandler);
-		listedDrives.addItem("vazio");
+		new DrivesWatcher().start();
 
 		header.add(new JLabel("Progeresso:"));
 		header.add(progressBar);

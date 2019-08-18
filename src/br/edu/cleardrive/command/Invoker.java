@@ -25,7 +25,6 @@ public class Invoker {
 	public Invoker() {
 		commands = new HashMap<String, Command>();
 		commands.put(CommandName.ABOUT.toString(), new AboutCommand());
-		commands.put(CommandName.DRIVE_CHANGED_COMBOBOX.toString(), new DriveChangeCommand());
 		commands.put(CommandName.HELP.toString(), new HelpCommand());
 		commands.put(CommandName.RECOVER.toString(), new RecoverCommand());
 		commands.put(CommandName.STOP.toString(), new StopRecoverCommand());
